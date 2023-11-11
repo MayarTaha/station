@@ -10,19 +10,17 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavDrawer(),
+      drawer: const NavDrawer(),
       appBar: AppBar(
         shadowColor: Colors.teal,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(80),
-          ),
+        backgroundColor: Colors.teal,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(80)),
         ),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 250.0),
+        title: const Padding(
+          padding: EdgeInsets.only(left: 250.0),
           child: Text(' مرحبا'),
         ),
-        backgroundColor: Colors.teal,
       ),
       body: SafeArea(
         child: Padding(
@@ -34,244 +32,266 @@ class Home extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Container(
-                        child: TextButton(
+                    TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Gas()),
+                          MaterialPageRoute(builder: (context) => const Gas()),
                         );
                       },
-                      child: Column(children: [
-                        Image.asset(
-                          'assets/itm.jpg',
-                          height: 78,
-                          width: 78,
-                        ),
-                        SizedBox(height: 3),
-                        Text(
-                          'الاصناف\nItems',
-                          style: TextStyle(
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/itm.jpg',
+                            height: 78,
+                            width: 78,
+                          ),
+                          const SizedBox(height: 3),
+                          Text(
+                            'الاصناف\nItems',
+                            style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Colors.cyan[800]),
-                        ),
-                      ]),
-                    )),
-                    SizedBox(width: 8),
-                    Container(
-                        child: TextButton(
+                              color: Colors.cyan[800],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Gas()),
+                          MaterialPageRoute(builder: (context) => const Gas()),
                         );
                       },
-                      child: Column(children: [
-                        Image.asset(
-                          'assets/bill.jpg',
-                          height: 78,
-                          width: 78,
-                        ),
-                        SizedBox(height: 3),
-                        Text(
-                          'فاتورة مشتريات\nPurches Bill',
-                          style: TextStyle(
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/bill.jpg',
+                            height: 78,
+                            width: 78,
+                          ),
+                          const SizedBox(height: 3),
+                          Text(
+                            'فاتورة مشتريات\nPurches Bill',
+                            style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Colors.cyan[800]),
-                        ),
-                      ]),
-                    )),
-                    SizedBox(width: 12),
-                    Container(
-                        child: TextButton(
+                              color: Colors.cyan[800],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Gas()),
+                          MaterialPageRoute(builder: (context) => const Gas()),
                         );
                       },
-                      child: Column(//
-                          children: [
-                        Image.asset(
-                          'assets/gas.jpg',
-                          height: 78,
-                          width: 78,
-                        ),
-                        SizedBox(height: 3),
-                        Text(
-                          'فاتورة بنزين\nPos Gasoline',
-                          style: TextStyle(
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/gas.jpg',
+                            height: 78,
+                            width: 78,
+                          ),
+                          const SizedBox(height: 3),
+                          Text(
+                            'فاتورة بنزين\nPos Gasoline',
+                            style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Colors.cyan[800]),
-                        ),
-                      ]),
-                    )),
+                              color: Colors.cyan[800],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                        child: TextButton(
+                    TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Gas()),
+                          MaterialPageRoute(builder: (context) => const Gas()),
                         );
                       },
-                      child: Column(children: [
-                        Image.asset(
-                          'assets/pos.jpg',
-                          height: 78,
-                          width: 78,
-                        ),
-                        SizedBox(height: 3),
-                        Text(
-                          'فاتورة بيع\nPos ',
-                          style: TextStyle(
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/pos.jpg',
+                            height: 78,
+                            width: 78,
+                          ),
+                          const SizedBox(height: 3),
+                          Text(
+                            'فاتورة بيع\nPos ',
+                            style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Colors.cyan[800]),
-                        ),
-                      ]),
-                    )),
-                    SizedBox(width: 12),
-                    Container(
-                        child: TextButton(
+                              color: Colors.cyan[800],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => suppliers()),
+                          MaterialPageRoute(
+                            builder: (context) => const Suppliers(),
+                          ),
                         );
                       },
-                      child: Column(children: [
-                        Image.asset(
-                          'assets/sup.jpg',
-                          height: 78,
-                          width: 78,
-                        ),
-                        SizedBox(height: 3),
-                        Text(
-                          'الموردين\nSuppliers ',
-                          style: TextStyle(
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/sup.jpg',
+                            height: 78,
+                            width: 78,
+                          ),
+                          const SizedBox(height: 3),
+                          Text(
+                            'الموردين\nSuppliers ',
+                            style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Colors.cyan[800]),
-                        ),
-                      ]),
-                    )),
-                    SizedBox(width: 12),
-                    Container(
-                        child: TextButton(
+                              color: Colors.cyan[800],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => customers()),
+                          MaterialPageRoute(
+                            builder: (context) => const Customers(),
+                          ),
                         );
                       },
-                      child: Column(children: [
-                        Image.asset(
-                          'assets/custm.jpg',
-                          height: 78,
-                          width: 78,
-                        ),
-                        SizedBox(height: 3),
-                        Text(
-                          'العملاء\nCustumers ',
-                          style: TextStyle(
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/custm.jpg',
+                            height: 78,
+                            width: 78,
+                          ),
+                          const SizedBox(height: 3),
+                          Text(
+                            'العملاء\nCustumers ',
+                            style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Colors.cyan[800]),
-                        ),
-                      ]),
-                    )),
+                              color: Colors.cyan[800],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ), //
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                        child: TextButton(
+                    TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => customers()),
+                          MaterialPageRoute(
+                            builder: (context) => const Customers(),
+                          ),
                         );
                       },
-                      child: Column(children: [
-                        Image.asset(
-                          'assets/report.jpg',
-                          height: 78,
-                          width: 78,
-                        ),
-                        SizedBox(height: 3),
-                        Text(
-                          'التقارير\nReports ',
-                          style: TextStyle(
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/report.jpg',
+                            height: 78,
+                            width: 78,
+                          ),
+                          const SizedBox(height: 3),
+                          Text(
+                            'التقارير\nReports ',
+                            style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Colors.cyan[800]),
-                        ),
-                      ]),
-                    )),
-                    SizedBox(width: 12),
-                    Container(
-                        child: TextButton(
+                              color: Colors.cyan[800],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Gas()),
+                          MaterialPageRoute(builder: (context) => const Gas()),
                         );
                       },
-                      child: Column(children: [
-                        Image.asset(
-                          'assets/st.jpg',
-                          height: 78,
-                          width: 78,
-                        ),
-                        SizedBox(height: 8),
-                        Text(
-                          'الاعدادات\nSettings ',
-                          style: TextStyle(
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/st.jpg',
+                            height: 78,
+                            width: 78,
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            'الاعدادات\nSettings ',
+                            style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Colors.cyan[800]),
-                        ),
-                      ]),
-                    )),
-                    SizedBox(width: 12),
-                    Container(
-                        child: TextButton(
+                              color: Colors.cyan[800],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Gas()),
+                          MaterialPageRoute(builder: (context) => const Gas()),
                         );
                       },
-                      child: Column(children: [
-                        Image.asset(
-                          'assets/printer.jpg',
-                          height: 78,
-                          width: 78,
-                        ),
-                        SizedBox(height: 3),
-                        Text(
-                          'اعدادات الطابعه\nPrinter ',
-                          style: TextStyle(
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/printer.jpg',
+                            height: 78,
+                            width: 78,
+                          ),
+                          const SizedBox(height: 3),
+                          Text(
+                            'اعدادات الطابعه\nPrinter ',
+                            style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
-                              color: Colors.cyan[800]),
-                        ),
-                      ]),
-                    )),
+                              color: Colors.cyan[800],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-                //assets/printer.png
               ],
             ),
           ),

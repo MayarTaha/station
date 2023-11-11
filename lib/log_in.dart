@@ -20,9 +20,7 @@ class _PriceState extends State<LogIn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('نسخة تجريبية'),
-        backgroundColor: Colors.teal,
-      ),
+          title: const Text('نسخة تجريبية'), backgroundColor: Colors.teal),
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.all(50),
@@ -36,7 +34,7 @@ class _PriceState extends State<LogIn> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       RichText(
-                        text: TextSpan(
+                        text: const TextSpan(
                           children: [
                             TextSpan(
                               text: "نسخة تجريبية\n",
@@ -46,9 +44,7 @@ class _PriceState extends State<LogIn> {
                               text: "تسجيل دخول\n",
                               style: TextStyle(fontSize: 10),
                             ),
-                            WidgetSpan(
-                              child: Icon(Icons.person, size: 50),
-                            ),
+                            WidgetSpan(child: Icon(Icons.person, size: 50)),
                           ],
                         ),
                       ),
@@ -61,9 +57,7 @@ class _PriceState extends State<LogIn> {
                     fillColor: Colors.grey[350],
                     filled: true,
                     border: const OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
                     ),
                     labelText: 'رقم الهاتف',
                     hintTextDirection: TextDirection.rtl,
@@ -73,7 +67,7 @@ class _PriceState extends State<LogIn> {
               Container(
                 padding: const EdgeInsets.all(10),
                 child: TextFormField(
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   obscureText: hidePassword,
                   decoration: InputDecoration(
@@ -92,9 +86,7 @@ class _PriceState extends State<LogIn> {
                             ),
                     ),
                     border: const OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(20),
-                      ),
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
                     ),
                     labelText: 'كلمة المرور',
                     hintTextDirection: TextDirection.rtl,
@@ -138,7 +130,7 @@ class _PriceState extends State<LogIn> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Home()),
+                      MaterialPageRoute(builder: (context) => const Home()),
                     );
                     //action
                   },

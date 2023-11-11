@@ -8,18 +8,15 @@ class First extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('اختر نوع النسخة'),
-        backgroundColor: Colors.teal,
-      ),
+          title: const Text('اختر نوع النسخة'), backgroundColor: Colors.teal),
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage(
-                "assets/image1.jpg",
-              ),
-              fit: BoxFit.cover),
-        ),
         width: double.infinity,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/image1.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -27,7 +24,7 @@ class First extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LogIn()),
+                  MaterialPageRoute(builder: (context) => const LogIn()),
                 );
                 //action
               },
@@ -37,11 +34,9 @@ class First extends StatelessWidget {
                 style: TextStyle(fontSize: 30, color: Colors.white),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             TextButton(
-              onPressed: () {
-                //action
-              },
+              onPressed: () {},
               child: const Text(
                 'نسخة مفعلة',
                 textAlign: TextAlign.center,

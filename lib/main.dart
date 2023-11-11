@@ -2,26 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:station/first.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:station/generated/l10n.dart';
-import 'package:station/log_in.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      locale: Locale('ar'),
-      localizationsDelegates: [
+      localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      locale: const Locale('ar'),
       supportedLocales: S.delegate.supportedLocales,
-      home: First(),
+      debugShowCheckedModeBanner: false,
+      home: const First(),
     );
   }
 }

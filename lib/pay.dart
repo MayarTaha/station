@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Pay extends StatelessWidget {
+  const Pay({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +40,7 @@ class Pay extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Container(
                     decoration: BoxDecoration(
                       border: Border.all(width: 5, color: Colors.teal),
@@ -62,7 +64,7 @@ class Pay extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Container(
                 decoration: BoxDecoration(
                   border: Border.all(width: 5, color: Colors.teal),
@@ -84,7 +86,7 @@ class Pay extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 200),
+              const SizedBox(height: 200),
               Container(
                 alignment: Alignment.bottomCenter,
                 child: Container(

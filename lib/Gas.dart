@@ -29,13 +29,13 @@ class Gas extends StatelessWidget {
                           width: 300,
                           height: 130,
                           child: TextButton.icon(
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.local_gas_station_outlined,
                               color: Colors.teal,
                               size: 90.0,
                             ),
                             label: RichText(
-                              text: TextSpan(
+                              text: const TextSpan(
                                 text: 'ديزل\n0.65 SR',
                                 style: TextStyle(
                                     fontSize: 25,
@@ -43,10 +43,17 @@ class Gas extends StatelessWidget {
                                     color: Colors.teal),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const Pump(price: 0.65),
+                                ),
+                              );
+                            },
                           ),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Container(
                           decoration: BoxDecoration(
                             border: Border.all(width: 5, color: Colors.teal),
@@ -54,13 +61,13 @@ class Gas extends StatelessWidget {
                           width: 300,
                           height: 130,
                           child: TextButton.icon(
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.local_gas_station_outlined,
                               color: Colors.teal,
                               size: 90.0,
                             ),
                             label: RichText(
-                              text: TextSpan(
+                              text: const TextSpan(
                                 text: 'بنزين 95\n2.18 SR',
                                 style: TextStyle(
                                     fontSize: 25,
@@ -71,7 +78,9 @@ class Gas extends StatelessWidget {
                             onPressed: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => Pump()),
+                                MaterialPageRoute(
+                                  builder: (context) => const Pump(price: 2.18),
+                                ),
                               );
                             },
                           ),
@@ -79,37 +88,40 @@ class Gas extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Expanded(
-                      child: Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(width: 5, color: Colors.teal),
-                    ),
-                    child: TextButton.icon(
-                      icon: Icon(
-                        Icons.local_gas_station_outlined,
-                        color: Colors.teal,
-                        size: 90.0,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 5, color: Colors.teal),
                       ),
-                      label: RichText(
-                        text: TextSpan(
-                          text: 'بنزين 91\n2.0 SR',
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.teal),
+                      width: 100,
+                      height: 130,
+                      child: TextButton.icon(
+                        icon: const Icon(
+                          Icons.local_gas_station_outlined,
+                          color: Colors.teal,
+                          size: 90.0,
                         ),
+                        label: RichText(
+                          text: const TextSpan(
+                            text: 'بنزين 91\n2.0 SR',
+                            style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.teal),
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Pump(price: 2.0),
+                            ),
+                          );
+                        },
                       ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Pump()),
-                        );
-                      },
                     ),
-                    width: 100,
-                    height: 130,
-                  )),
+                  ),
                 ],
               ),
             ],
